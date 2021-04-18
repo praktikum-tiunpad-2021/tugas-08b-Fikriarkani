@@ -92,17 +92,19 @@ void enqueue(Queue<T> &q, const T &value, int priority) {
     q.tail = newElement;
   } 
   else {
-    while (newElement->priority >= pHelp->priority){
-      if (pHelp->next = nullptr)
-        break;
+    while (newElement->priority = pHelp->priority){
       pRev = pHelp;
-      pHelp = pHelp->next;
+      pHelp->next= newElement;
+      if(newElement->next = nullptr){
+        newElement = q.tail;
+      }
+      break;
     }
     if (pHelp == q.head && newElement->priority > pHelp->priority) {
       newElement->next = pHelp;
       q.head = newElement;
     }
-    else if ( pHelp == q.tail && newElement->priority < pHelp->priority){
+    else if (pHelp == q.tail && newElement->priority < pHelp->priority){
       pHelp->next = newElement;
       q.tail = newElement;
     }
