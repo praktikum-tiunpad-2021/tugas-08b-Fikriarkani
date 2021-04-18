@@ -10,6 +10,9 @@ namespace priority_queue {
 template <typename T>
 struct Element {
   // Implementasikan di sini.
+  int data;
+  int priority;
+  Element *next;
 };
 
 template <typename T>
@@ -21,6 +24,9 @@ using ElementPtr = Element<T> *;
 template <typename T>
 struct Queue {
   // Implementasikan di sini.
+  ElementPtr<T> head;
+  ElementPtr<T> tail;
+  
 };
 
 /**
@@ -31,6 +37,10 @@ struct Queue {
 template <typename T>
 Queue<T> new_queue() {
   // Implementasikan di sini.
+  Queue<T> Que;
+  Que.head = nullptr;
+  Que.tail = nullptr;
+  return Que;
 }
 
 /**
@@ -43,6 +53,7 @@ Queue<T> new_queue() {
 template <typename T>
 void enqueue(Queue<T> &q, const T &value, int priority) {
   // Implementasikan di sini.
+
 }
 
 /**
